@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Land Rover</title>
+    <title>Land Rover </title>
   </head>
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -17,8 +17,51 @@
     href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
     rel="stylesheet"
   />
-  <script src="landrover.js"></script>
-  <link rel="stylesheet" href="landrover.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      font-family: Arial;
+      font-size: 17px;
+    }
+    
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%; 
+      min-height: 100%;
+    }
+    
+    .content {
+      position: fixed;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: #f1f1f1;
+      width: 100%;
+      padding: 20px;
+    }
+    
+    #myBtn {
+      width: 200px;
+      font-size: 18px;
+      padding: 10px;
+      border: none;
+      background: green;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    
+    #myBtn:hover {
+      background:white;
+      color: black;
+    }
+    </style>
   <body>
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link
@@ -26,300 +69,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
-    <div class="topnav" id="myTopnav">
-      <a href="#Logo" class="logonav"
-        ><img
-          src="https://dxnav.landrover.com/current/images/logo-landrover-7bd33da9d247934b2b4929d399ab8a42.png"
-          alt="Land Rover Logo"
-          width="83px"
-      /></a>
-      <a href="#SUV">SUV</a>
-      <a href="#Sedan">Luxury Sedan</a>
-      <a href="#Landrover EV">Land Rover EV</a>
-      <a href="#Landrover Hybrid">Land Rover Hybrid</a>
-      <a href="View Prices">View Prices</a>
-      <a href="#Testdrive">Test Drive</a>
-
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
       </a>
     </div>
+    <video autoplay muted loop id="myVideo">
+      <source src="https://www.landrover.in/content/dam/lrdx/global/house-of-brands/defender/LR_DX_Defender_Rocks_1920x1080_slow_6___prores_200423%20(1)_1.mp4" type="video/mp4">
       
-     <!-- Our Vechiles -->
-    <div class="vechiles">Meet Our Pride</div>
-    <div class="row" id="vechiles">
-      <div class="column">
-        <div class="card">
-        <img src="evoke.png" alt="evoke" style="width: 100%;" >
-          <div class="container">
-            <h2>THE NEW RANGE ROVER</h2>
-            <br />
-            <p class="title" id="details">Peerless refinement and luxury.</p>
-            <br />
-            <p class="details">&rArr; Reserve Online</p>
-            <br />
-            <p class="details">&rArr; Find Out More</p>
-            <br />
-            <p class="details">&rArr; Build Your Own</p>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <img src="new range rover.png" alt="evoke" style="width: 100%;" >
-          <div class="container">
-            <h2>NEW RANGE ROVER SPORT</h2>
-            <br />
-            <p class="title" id="details">Time to make a statement.</p>
-            <br />
-            <p class="details">&rArr; Reserve Online</p>
-            <br />
-            <p class="details">&rArr; Find Out More</p>
-            <br />
-            <p class="details">&rArr; Build Your Own</p>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <img
-            src="https://www.landrover.in/Images/L560_18MY_237_GLHD_DX_V2_Device-Desktop_680x450_297-355809_680x450.jpg?v=16"
-            alt="RANGE ROVER VELAR"
-            style="width: 100%"
-          />
-          <div class="container">
-            <h2>RANGE ROVER VELAR</h2>
-            <br />
-            <p class="title" id="details">Peerless refinement and luxury.</p>
-
-            <br />
-            <p class="details">&rArr; Reserve Online</p>
-            <br />
-            <p class="details">&rArr; Find Out More</p>
-            <br />
-            <p class="details">&rArr; Build Your Own</p>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <img src="evoke.png" alt="evoke" style="width: 100%;" >
-          <div class="container">
-            <h2>RANGE ROVER EVOQUE</h2>
-            <br />
-            <p class="title" id="details">Peerless refinement and luxury.</p>
-            <br />
-            <p class="details">&rArr; Reserve Online</p>
-            <br />
-            <p class="details">&rArr; Find Out More</p>
-            <br />
-            <p class="details">&rArr; Build Your Own</p>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <img
-            src="discovery.png"
-            alt="DISCOVERY"
-            style="width: 100%"
-          />
-          <div class="container">
-            <h2>DISCOVERY</h2>
-            <br />
-            <p class="title" id="details">Peerless refinement and luxury.</p>
-            <br />
-            <p class="details">&rArr; Reserve Online</p>
-            <br />
-            <p class="details">&rArr; Find Out More</p>
-            <br />
-            <p class="details">&rArr; Build Your Own</p>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <img
-            src="discovery sport.png"
-            alt="DISCOVERY SPORT"
-            style="width: 100%"
-          />
-          <div class="container">
-            <h2>DISCOVERY SPORT</h2>
-            <br />
-            <p class="title" id="details">Peerless refinement and luxury.</p>
-            <br />
-            <p class="details">&rArr; Reserve Online</p>
-            <br />
-            <p class="details">&rArr; Find Out More</p>
-            <br />
-            <p class="details">&rArr; Build Your Own</p>
-          </div>
-        </div>
-      </div>
+    </video>
+    
+    <div class="content">
+      <h1>CLIMB with LANDROVER</h1>
+    
+      <a href="landrover.html" ><button id="myBtn">Explore</button></a>
     </div>
-<!--Our Family-->
-<div class="gadi">Our Family</div>
-
-<div class="i" id="gadi">
-  <div class="j">
-    <div class="cardd">
-      <img src="r.png" alt="Range Rover Family" style="width:100%">
-      <div class="dabba">
-        <h2>RANGE ROVER FAMILY</h2>
-        <br>
-        <p class="title" id="details">Peerless Refinement.</p>
-        <br>
-        <p  class="details">&rArr; MEET THE FAMILY</p>
-       </div>
-    </div>
-  </div>
-
-  <div class="j">
-    <div class="cardd">
-      <img src="defender.png" alt="Defender Family" style="width:100%">
-      <div class="dabba">
-        <h2>DEFENDER FAMILY</h2>
-        <br>
-        <p class="title" id="details">Purposeful Durability.</p>
-        <br>
-        <p class="details">&rArr; MEET THE FAMILY</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="j">
-    <div class="cardd">
-      <img src="discovery.png" alt="Discovery Family" style="width:100%">
-      <div class="dabba">
-        <h2>Discovery Family </h2>
-        <br>
-        <p class="title" id="details">Everyday Versality.</p>
-        <br>
-        <p class="details">&rArr; MEET THE FAMILY</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--Explore Land Rover-->
-<div class="GADI">EXPLORE LAND ROVER</div>
-
-<div class="i" id="I">
-  <div class="J">
-    <div class="cardd">
-      <img src="accessories.png" alt="Accessories" style="width:100%">
-      <div class="dabba">
-        <h2>ACCESSORIES FOR YOUR LAND ROVER</h2>
-        <br>
-        <p class="Title" id="Details">Explore a wide selection of exciting accessories for your Land Rover and get the most out of every journey.</p>
-        <br>
-        <p class="details" >&rArr; Explore Accessories.</p>
-       </div>
-    </div>
-  </div>
-
-  <div class="J">
-    <div class="cardd">
-      <img src="landrover magazine.jpg" alt="Land Rover Magzine" style="width:100%">
-      <div class="dabba">
-        <h2>LAND ROVER MAGAZINE</h2>
-        <br>
-        <p class="Title" id="Details" >Our vehicles are a celebration of the inner strength and drive to go above and beyond. That means ‘impossible’ is a word seldom entertained in our lives. Explore our world of exceptional capability with the exclusively curated Land Rover Magazine.</p>
-        <br>
-        <p class="details">&rArr; FIND OUT MORE.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<!--Find Dealership-->
-<div class="bg-img">
-  <form class="CONTAINER">
-    <h1>FIND YOUR NEAREST DEALERSHIP</h1>
-<br>
-    <p><b> For sales, expert advice and support find a dealership near you </b></p>
-    <br>
-    <br>
-    <button type="submit" class="btn"> FIND A DEALERSHIP </button>
-  </form>
-</div>
-
-
-  </body>
-</html>
-<!--Footer-->
-<footer class="footer">
-  <div class="Container">
-    <div class="Row">
-      <div class="footer-col">
-        <h4>DOWNLOAD</h4>
-        <ul>
-          <li><a href="#">DOWNLOAD SPECIFICATIONS</a></li>
-          <li><a href="#">OFFICIAL LAND ROVER COLLECTION</a></li>
-          <li><a href="#">privacy policy</a></li>
-
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>FOLLOW US</h4>
-        <ul>
-          <li><a href="#">GET ME A QUOTE</a></li>
-          <li><a href="#">FIND ME A SUV</a></li>
-          <li><a href="#">BOOK A TEST DRIVE</a></li>
-          <li><a href="#">CONTACT RETAILER</a></li>
-          <li><a href="#">NEWS</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>ABOUT US</h4>
-        <ul>
-          <li><a href="#">JAGUAR LAND ROVERh</a></li>
-          <li><a href="#">SOCIAL RESPONSIBILITY</a></li>
-          <li><a href="#">JAGUAR LAND ROVER CSR POLICY</a></li>
-          <li><a href="#">JLR ANNUAL RETURN</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>JOIN THE CONVERSATION</h4>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          
-          
-         
-        </div>
-      </div>
-     </div>
-  </div>
-</footer>
-<!--Footer2-->
-<div class="Footer"><span>  
-  &copy;JAGUAR LAND ROVER LIMITED 2022. All rights reserved.
-  <br>
-  <br>
-  Jaguar Land Rover Limited: Registered office: Abbey Road, Whitley, Coventry CV3 4LF. Registered in England No: 1672070
-<br><br>
-  <br>Smart Settings is intended to be released as part of a future wireless software update. Software development and releases are subject to movements in planning and programming, and dates may be subject to change.
-  <br>
-  <br>There is currently a global shortage of semi-conductor components. Jaguar Land Rover India Limited (JLRIL) is affected by this shortage and as a result, certain Jaguar and Land Rover products may not be available and delivery timelines for some products may be extended by authorised Jaguar Land Rover Retailers. Please contact your authorised Jaguar Land Rover Retailer for further updates.
-  <br>
-  <br>Accessories/features shown may not be part of standard equipment. iPod is a registered trademark of Apple Inc., registered in the US and other countries. Meridian is a registered trademark of Meridian Audio Ltd. Please note not all features set out above are available as standard for all Land Rover models. Some features are available as a [cost option] only. Please refer to the Owners Handbook for Navigation Terms and Conditions. The Information and specification shown are not binding and are subject to change without prior notice. These are indicative specifications for reference only.
-  <br>
-  <br>The figures provided are as a result of official manufacturer's tests in accordance with EU legislation. A vehicle's actual fuel consumption may differ from that achieved in such tests and these figures are for comparative purposes only.
-  <br>
-  <br>From 30 September 2019 Spotify will no longer be supporting the InControl Apps access. As the dominant preferred access by customers it will be available to customers via Smartphone Pack where installed.
-  <br>
-  <br>Important note on imagery & specification. We are living through exceptional times. Due to the Covid pandemic we have been prevented or delayed in the creation of new images of current model years. Now the global impact of micro-chip shortages is further affecting build specifications, options and launch timings. Until this unique event settles, please note that many images cannot be updated to 22/23/23.5 model year specifications. Features, options, trim and colour schemes will differ from many images. Customers are urged to consult your local Retailer for detailed 22/23/23.5 model year specifications and do not base an order on marketing imagery and specification alone.​
-  <br>
-  <br>Jaguar Land Rover Limited is constantly seeking ways to improve the specification, design and production of its vehicles, parts and accessories and alterations take place continually, and we reserve the right to change without notice. Some features may vary between optional and standard for different model years. The information, specification, engines and colours on this website are based on European specification and may vary from market to market and are subject to change without notice. Some vehicles are shown with optional equipment and retailer-fit accessories that may not be available in all markets. Please contact your local retailer for local availability and prices.
-  <br>
-  <br>
-  <br>COLOURS <br><br>
-
-  Image colours reproduced here are provided for illustrative purposes only. Colours are reproduced on-screen and may therefore vary compared to the actual finish. The company reserves the right to alter or withdraw any colour finish without notice. Some of these colours may not be obtainable in your country. Please check availability of colours and current specifications with your Jaguar Retailer. Distributors and Retailers are not agents of Jaguar Land Rover Limited and have absolutely no authority to bind Jaguar Land Rover Limited​ to any express or implied undertaking or representation.​
-  <br>
-  <br>
-  The mapping on this website is provided by external mapping providers and is for general information purposes only.</span></div>
+    
